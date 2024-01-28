@@ -1,0 +1,103 @@
+.icon25 {
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+.browse {
+  color: #605bff;
+}
+.placeholder-text2 {
+  position: relative;
+  line-height: 24px;
+}
+.label-child,
+.label-item {
+  display: none;
+  max-width: 100%;
+}
+.label-child {
+  width: 564px;
+  height: 258px;
+  position: relative;
+  border-radius: 8px;
+  border: 1px dashed rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+.label-item {
+  width: 464px;
+}
+.label24 {
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px dashed rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 98px 20px 84px 21px;
+  gap: 16px;
+  max-width: 100%;
+  z-index: 1;
+}
+.icon26,
+.value {
+  position: relative;
+}
+.icon26 {
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+}
+.value {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: Figtree;
+  color: #fff;
+  text-align: left;
+}
+.sizemd-iconleft-typeprima1 {
+  cursor: pointer;
+  border: 0;
+  padding: 16px 20px;
+  background-color: #605bff;
+  align-self: stretch;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0.4;
+}
+.sizemd-iconleft-typeprima1:hover {
+  background-color: #7a75ff;
+}
+.controls,
+.input-container1 {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.input-container1 {
+  flex: 1;
+  border-radius: 8px;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 21px;
+}
+.controls {
+  width: 622px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 26px 0 0;
+  text-align: center;
+  font-size: 16px;
+  color: #999ca0;
+  font-family: Figtree;
+}

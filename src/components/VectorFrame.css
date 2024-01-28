@@ -1,0 +1,113 @@
+.upload-csv2 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 32px;
+  font-weight: 600;
+  font-family: inherit;
+}
+.upload-c-s-v-text-inner,
+.upload-csv-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.upload-c-s-v-text-inner {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: center;
+}
+.upload-c-s-v-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 684px;
+  max-width: 100%;
+  z-index: 1;
+}
+.frame-mask-group {
+  height: 23px;
+  width: 18px;
+  position: relative;
+}
+.mask-group-icon4 {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  object-fit: contain;
+}
+.input-container-frame,
+.vector-shape {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 28px;
+}
+.input-container-frame {
+  align-self: stretch;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 34px;
+  max-width: 100%;
+}
+.mask-group-instance,
+.vector-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.mask-group-instance {
+  align-self: stretch;
+  align-items: center;
+  gap: 137px;
+  max-width: 100%;
+}
+.vector-frame {
+  flex: 1;
+  align-items: flex-start;
+  padding: 49px 0 0;
+  box-sizing: border-box;
+  max-width: calc(100% - 248px);
+  text-align: left;
+  font-size: 24px;
+  color: #000;
+  font-family: Figtree;
+}
+@media screen and (max-width: 1125px) {
+  .mask-group-instance {
+    gap: 68px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .vector-frame {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .upload-c-s-v-text {
+    min-width: 100%;
+  }
+  .input-container-frame {
+    gap: 17px;
+  }
+  .mask-group-instance {
+    gap: 34px;
+  }
+  .vector-frame {
+    padding-top: 32px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .upload-csv2 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  .mask-group-instance {
+    gap: 17px;
+  }
+}

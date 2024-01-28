@@ -1,0 +1,42 @@
+.right-side,
+.subtract-icon {
+  position: relative;
+  display: none;
+}
+.right-side {
+  height: 1024px;
+  width: 1440px;
+  background-color: #f8faff;
+  max-width: 100%;
+}
+.subtract-icon {
+  height: 0;
+  width: 0;
+}
+.sign-in {
+  width: 100%;
+  position: relative;
+  background-color: #f8faff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 94px;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1200px) {
+  .sign-in {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sign-in {
+    gap: 47px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .sign-in {
+    gap: 23px;
+  }
+}
