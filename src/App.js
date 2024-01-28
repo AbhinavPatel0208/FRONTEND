@@ -5,8 +5,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Uploaded from "./pages/Uploaded";
 import SignIn from "./pages/SignIn";
+import Uploaded from "./pages/Uploaded";
 import Uploading from "./pages/Uploading";
 import Upload from "./pages/Upload";
 
@@ -30,7 +30,7 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/sign-in":
+      case "/uploaded":
         title = "";
         metaDescription = "";
         break;
@@ -60,8 +60,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Uploaded />} />
-      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/" element={<SignIn />} />
+      <Route path="/uploaded" element={<Uploaded />} />
       <Route path="/uploading" element={<Uploading />} />
       <Route path="/upload" element={<Upload />} />
     </Routes>
