@@ -1,44 +1,17 @@
-import { useMemo } from "react";
 
-const UploadFrame = ({
-  menuAlignSelf,
-  menuHeight,
-  bGAlignSelf,
-  fRAMEAlignSelf,
-}) => {
-  const uploadFrameStyle = useMemo(() => {
-    return {
-      alignSelf: menuAlignSelf,
-      height: menuHeight,
-    };
-  }, [menuAlignSelf, menuHeight]);
-
-  const menuStyle = useMemo(() => {
-    return {
-      alignSelf: bGAlignSelf,
-    };
-  }, [bGAlignSelf]);
-
-  const fRAMEStyle = useMemo(() => {
-    return {
-      alignSelf: fRAMEAlignSelf,
-    };
-  }, [fRAMEAlignSelf]);
-
+const UploadFrame = ({ menuAlignSelf, menuHeight, bGAlignSelf, fRAMEAlignSelf }) => {
   return (
     <div
       className="flex flex-col items-start justify-end pt-0 px-0 pb-0 shrink-0 mq1050:hidden"
-      style={uploadFrameStyle}
+      style={{ height: menuHeight }}
     >
       <nav
-        className="m-0 bg-light-gohan flex flex-col items-start justify-start pt-[51px] px-0 pb-[479px] gap-[40px] text-left text-base text-text font-nunito mq750:pt-[21px] mq750:pb-[202px] mq750:box-border mq1050:pt-[33px] mq1050:pb-[311px] mq1050:box-border"
-        style={menuStyle}
+        className={`m-0 bg-light-gohan flex flex-col items-start justify-start pt-[51px] px-0 pb-[479px] gap-[40px] text-left text-base text-text font-nunito mq750:pt-[21px] mq750:pb-[202px] mq750:box-border mq1050:pt-[33px] mq1050:pb-[311px] mq1050:box-border ${bGAlignSelf}`}
+
       >
         <div className="self-stretch relative bg-light-gohan h-[1047px] hidden" />
-        <div
-          className="h-[52px] flex flex-row items-start justify-start py-0 pr-[55px] pl-14 box-border text-5xl"
-          style={fRAMEStyle}
-        >
+        {/* Logo */}
+        <div className={`h-13 flex flex-row items-start justify-start py-0 pr-14 pl-14 box-border text-5xl ${fRAMEAlignSelf}`}>
           <div className="flex flex-row items-center justify-start gap-[15px]">
             <div className="h-[42px] w-[42px] relative">
               <img
@@ -58,18 +31,20 @@ const UploadFrame = ({
             </h2>
           </div>
         </div>
+        {/* sidebar components */}
         <div className="w-[146px] flex flex-col items-end justify-start gap-[24px] text-darkgray-100">
-          <div className="flex flex-row items-center justify-start py-0 pr-0 pl-5 gap-[14px]">
+          <div className="flex items-center justify-start pl-5 gap-3.5">
             <img
-              className="h-6 w-6 relative object-cover min-h-[24px] z-[1]"
+              className="h-6 w-6 relative object-cover z-10"
               loading="eager"
               alt=""
               src="/iconlyboldcategory@2x.png"
             />
-            <div className="h-[22px] relative font-semibold inline-block z-[1]">
+            <div className="relative font-semibold z-10">
               Dashboard
             </div>
           </div>
+
           <div className="self-stretch flex flex-row items-start justify-start py-0 pr-[27px] pl-0 text-mediumslateblue-200">
             <div className="flex-1 flex flex-row items-center justify-start gap-[16px]">
               <div className="h-12 flex-1 relative">
@@ -85,73 +60,78 @@ const UploadFrame = ({
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-start justify-start py-0 px-[31px]">
-          <div className="flex flex-row items-start justify-start gap-[14px]">
-            <div className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0">
+        <div className="flex px-8">
+          <div className="flex gap-3.5">
+            <div className="flex flex-col pt-1.5">
               <img
-                className="w-6 h-[16.4px] relative object-cover z-[1]"
+                className="w-6 h-4 object-cover relative z-10"
                 loading="eager"
                 alt=""
                 src="/iconlyboldticket@2x.png"
               />
             </div>
-            <div className="relative font-semibold inline-block h-[13px] opacity-[0.5] z-[1]">
+            <div className="relative font-semibold inline-block h-3.5 opacity-50 z-10">
               Invoice
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-start justify-start py-0 px-[31px]">
-          <div className="flex flex-row items-center justify-start gap-[14px]">
+
+        <div className="flex px-8">
+          <div className="flex items-center gap-3.5">
             <img
-              className="h-[26.4px] w-6 relative object-cover z-[1]"
+              className="h-7 w-6 object-cover relative z-10"
               loading="eager"
               alt=""
               src="/iconlybolddocument@2x.png"
             />
-            <div className="h-[22px] relative font-semibold inline-block opacity-[0.5] z-[1]">
+            <div className="relative font-semibold inline-block h-5.5 opacity-50 z-10">
               Schedule
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-start justify-start py-0 px-[31px]">
-          <div className="flex flex-row items-center justify-start gap-[14px]">
+
+        <div className="flex px-8">
+          <div className="flex items-center gap-3.5">
             <img
-              className="h-[26.4px] w-6 relative object-cover z-[1]"
+              className="h-7 w-6 object-cover relative z-10"
               loading="eager"
               alt=""
               src="/calendar@2x.png"
             />
-            <div className="h-[22px] relative font-semibold inline-block opacity-[0.5] z-[1]">
+            <div className="relative font-semibold inline-block h-5.5 opacity-50 z-10">
               Calendar
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-start justify-start py-0 px-[31px]">
-          <div className="flex flex-row items-start justify-start gap-[14px]">
+
+        <div className="flex px-8">
+          <div className="flex items-start gap-3.5">
             <img
-              className="h-[26.4px] w-6 relative object-cover z-[1]"
+              className="h-7 w-6 object-cover relative z-10"
               loading="eager"
               alt=""
               src="/iconlyboldnotification@2x.png"
             />
-            <div className="h-[22px] relative font-semibold inline-block opacity-[0.5] z-[1]">
+            <div className="relative font-semibold inline-block h-5.5 opacity-50 z-10">
               Notification
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-start justify-start py-0 px-[31px]">
-          <div className="flex flex-row items-center justify-start gap-[14px]">
+
+        <div className="flex px-8">
+          <div className="flex items-center gap-3.5">
             <img
-              className="h-[26.4px] w-6 relative object-cover z-[1]"
+              className="h-7 w-6 object-cover relative z-10"
               loading="eager"
               alt=""
               src="/iconlyboldsetting@2x.png"
             />
-            <div className="relative font-semibold opacity-[0.5] z-[1]">
+            <div className="relative font-semibold opacity-50 z-10">
               Settings
             </div>
           </div>
         </div>
+
       </nav>
     </div>
   );
