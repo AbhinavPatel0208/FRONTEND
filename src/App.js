@@ -27,11 +27,11 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
+        title = "Home";
         metaDescription = "";
         break;
       case "/uploaded":
-        title = "";
+        title = "Uploaded";
         metaDescription = "";
         break;
       case "/uploading":
